@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan – Filmowanie | Fotografia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      background: url('01.jpg');
+      background-position: center;
+      background-size: cover;
+      background-blend-mode: overlay;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4e00;
+    }
+
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #ff4e00;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      filter: brightness(1.1);
+    }
+
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media(min-width: 768px) {
+      .video-section {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .video-text {
+        flex: 1;
+        padding-right: 2rem;
+      }
+
+      .video-wrapper {
+        flex: 1;
+      }
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>ALAN</strong></div>
+    <div>
+      <a href="#o-mnie">O mnie</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero-content">
+      <h1>Filmowanie. Fotografia. Montaż.</h1>
+      <p>Tworzę obrazy, które zostają w pamięci</p>
+    </div>
+  </header>
+
+  <section class="section" id="o-mnie">
+    <h2>O mnie</h2>
+    <p>Cześć! Nazywam się Alan, mam 15 lat i zajmuję się filmowaniem, montażem oraz fotografią. Pasjonuję się tworzeniem dynamicznych ujęć i emocjonalnych historii, które trafiają prosto do odbiorcy.</p>
+    <p>Pracuję na terenie powiatu Ostrołęckiego i Warszawy</p>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Portfolio</h2>
+
+    <h3>Zdjęcia</h3>
+    <div class="gallery">
+      <img src="1.jpg" alt="Zdjęcie 1">
+      <img src="2.jpg" alt="Zdjęcie 2">
+      <img src="3.jpg" alt="Zdjęcie 3">
+    </div>
+
+    <h3>Film</h3>
+    <div class="video-section">
+      <div class="video-text">
+        <h1>Opowiem Ci jak mogę Ci pomóc.</h1>
+        <h5>W tym krótkim wideo przedstawię Ci swoje podejście do pracy, wartości oraz korzyści, jakie możesz czerpać ze współpracy ze mną.</h5>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/TWÓJ_FILM_ID" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Skontaktuj się ze mną przez e-mail: alantyszka.biznes@gmail.com</p>
+    <p>Lub telefonicznie +48 797 342 634</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alan. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+</body>
+</html>
